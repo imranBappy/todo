@@ -1,7 +1,7 @@
 "use client";
 
 import Todo from "./Todo";
-import AddTodo from "./AddTodo";
+import AddEditTodo from "./AddTodo";
 import { useSelector } from "react-redux";
 import TodoNotFound from "./TodoNotFound";
 const DoneTodos = () => {
@@ -9,9 +9,7 @@ const DoneTodos = () => {
 
   const allDoneTodo = todos.filter((todo) => todo.isDone);
 
-  let content = allDoneTodo.map((todo) => (
-    <Todo key={todo.id} data={todo} />
-  ));
+  let content = allDoneTodo.map((todo) => <Todo key={todo.id} data={todo} />);
 
   if (!allDoneTodo?.length) {
     content = <TodoNotFound />;

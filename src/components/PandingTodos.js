@@ -1,12 +1,12 @@
 "use client";
 import Todo from "./Todo";
-import AddTodo from "./AddTodo";
+import AddEditTodo from "./AddTodo";
 import { useSelector } from "react-redux";
 import TodoNotFound from "./TodoNotFound";
 
 const PandingTodos = () => {
   const todos = useSelector((state) => state.todos.todos);
- 
+
   const allPandingTodo = todos?.filter((todo) => !todo.isDone);
 
   let content = allPandingTodo.map((todo) => (
@@ -30,7 +30,7 @@ const PandingTodos = () => {
         Task
       </h3>
       <div className="p-3  flex-grow flex flex-col gap-2">{content}</div>
-      <AddTodo />
+      <AddEditTodo />
     </div>
   );
 };
