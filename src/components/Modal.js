@@ -4,7 +4,7 @@ export default function Modal({ open, onClose, title = "Model", children }) {
   return (
     <div
       id="default-modal"
-      tabindex="-1"
+      tabIndex="-1"
       aria-hidden="true"
       className={`
     flex
