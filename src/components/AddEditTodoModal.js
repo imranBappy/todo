@@ -88,7 +88,6 @@ const AddEditTodoModal = ({ open, onClose, data = undefined }) => {
             type="text"
             className="bg-black text-white border border-gray-300  text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
             placeholder="Write your task details"
-            required
             rows={5}
             value={todo["description"]}
             onChange={handleChange}

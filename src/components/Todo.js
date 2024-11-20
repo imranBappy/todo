@@ -77,7 +77,7 @@ const Todo = ({ data }) => {
         <div>
           <div className="p-4 md:p-5 space-y-4">
             <p className="text-base leading-relaxed text-gray-300 ">
-              {description}
+              {description || <span >Description not found!</span> }
             </p>
           </div>
           <div className="flex  justify-end p-4 md:p-5 border-t border-gray-200 rounded-b">
